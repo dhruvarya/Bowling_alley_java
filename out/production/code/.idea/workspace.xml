@@ -1,57 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ZUaMZaFRs5FQ3M1MK7SxKFIfUK" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
+  <component name="ProjectId" id="1ZXauDHfeSB6i1H9uwnQ5Tz7ked" />
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration name="Bowling_alley_driver" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="drive" />
-      <module name="code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="" />
-      <created>1584896078349</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1584896078349</updated>
-      <workItem from="1584896079606" duration="47000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584896125686">
-      <screen x="0" y="28" width="1920" height="1052" />
-    </state>
-    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1584896125686" />
-    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584896105370">
-      <screen x="0" y="28" width="1920" height="1052" />
-    </state>
-    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1584896105370" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
 </project>
