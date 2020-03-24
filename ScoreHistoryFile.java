@@ -14,7 +14,7 @@ public class ScoreHistoryFile {
 	private static String SCOREHISTORY_DAT = "SCOREHISTORY.DAT";
 
 	public static void addScore(String nick, String date, String score)
-		throws IOException, FileNotFoundException {
+		throws IOException {
 
 		String data = nick + "\t" + date + "\t" + score + "\n";
 
@@ -24,9 +24,9 @@ public class ScoreHistoryFile {
 		out.close();
 	}
 
-	public static Vector getScores(String nick)
-		throws IOException, FileNotFoundException {
-		Vector scores = new Vector();
+	public static Vector<Score> getScores(String nick)
+		throws IOException {
+		Vector<Score> scores = new Vector<>();
 
 		BufferedReader in =
 			new BufferedReader(new FileReader(SCOREHISTORY_DAT));
