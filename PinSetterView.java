@@ -14,7 +14,6 @@
  */
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.util.Vector;
 
@@ -22,19 +21,18 @@ import java.util.Vector;
 public class PinSetterView implements PinsetterObserver {
 
 
-    private Vector pinVect = new Vector ( );
-    private JPanel firstRoll;
-    private JPanel secondRoll;
+	private Vector<JLabel> pinVect = new Vector<>();
+	private JPanel secondRoll;
 
-    /**
-     * Constructs a Pin Setter GUI displaying which roll it is with
-     * yellow boxes along the top (1 box for first roll, 2 boxes for second)
-     * and displays the pins as numbers in this format:
-     *
-     *                7   8   9   10
-     *                  4   5   6
-     *                    2   3
-     *                      1
+	/**
+	 * Constructs a Pin Setter GUI displaying which roll it is with
+	 * yellow boxes along the top (1 box for first roll, 2 boxes for second)
+	 * and displays the pins as numbers in this format:
+	 *
+	 *                7   8   9   10
+	 *                  4   5   6
+	 *                    2   3
+	 *                      1
      *
      */
     
@@ -44,34 +42,34 @@ public class PinSetterView implements PinsetterObserver {
     public PinSetterView ( int laneNum ) {
 	
 	frame = new JFrame ( "Lane " + laneNum + ":" );
-	
-	Container cpanel = frame.getContentPane ( );
-	
-	JPanel pins = new JPanel ( );
-	
-	pins.setLayout ( new GridLayout ( 4, 7 ) );
-	
-	//********************Top of GUI indicates first or second roll
-	
-	JPanel top = new JPanel ( );
-	
-	firstRoll = new JPanel ( );
-	firstRoll.setBackground( Color.yellow );
-	
-	secondRoll = new JPanel ( );
-	secondRoll.setBackground ( Color.black );
-	
-	top.add ( firstRoll, BorderLayout.WEST );
-	
-	top.add ( secondRoll, BorderLayout.EAST );
-	
-	//******************************************************************
-	
-	//**********************Grid of the pins**************************
-	
-	
-	JPanel one = new JPanel ();
-	JLabel oneL = new JLabel ( "1" );
+
+		Container cpanel = frame.getContentPane();
+
+		JPanel pins = new JPanel();
+
+		pins.setLayout(new GridLayout(4, 7));
+
+		//********************Top of GUI indicates first or second roll
+
+		JPanel top = new JPanel();
+
+		JPanel firstRoll = new JPanel();
+		firstRoll.setBackground(Color.yellow);
+
+		secondRoll = new JPanel();
+		secondRoll.setBackground(Color.black);
+
+		top.add(firstRoll, BorderLayout.WEST);
+
+		top.add(secondRoll, BorderLayout.EAST);
+
+		//******************************************************************
+
+		//**********************Grid of the pins**************************
+
+
+		JPanel one = new JPanel();
+		JLabel oneL = new JLabel("1");
 	one.add (oneL);
 	JPanel two = new JPanel ();
 	JLabel twoL = new JLabel ( "2" );
@@ -188,19 +186,19 @@ public class PinSetterView implements PinsetterObserver {
 	if ( !(pe.isFoulCommited()) ) {
 	    	JLabel tempPin = new JLabel ( );
 	    	for ( int c = 0; c < 10; c++ ) {
-				boolean pin = pe.pinKnockedDown ( c );
-				tempPin = (JLabel)pinVect.get ( c );
-				if ( pin ) {
-		    		tempPin.setForeground ( Color.lightGray );
+				boolean pin = pe.pinKnockedDown(c);
+				tempPin = pinVect.get(c);
+				if (pin) {
+					tempPin.setForeground(Color.lightGray);
 				}
-	    	}
+			}
     	}
 		if ( pe.getThrowNumber() == 1 ) {
 	   		 secondRoll.setBackground ( Color.yellow );
 		}
 	if ( pe.pinsDownOnThisThrow() == -1) {
-		for ( int i = 0; i != 10; i++){
-			((JLabel)pinVect.get(i)).setForeground(Color.black);
+		for ( int i = 0; i != 10; i++) {
+			(pinVect.get(i)).setForeground(Color.black);
 		}
 		secondRoll.setBackground( Color.black);
 	}
@@ -213,9 +211,9 @@ public class PinSetterView implements PinsetterObserver {
     public void hide() {
     	frame.hide();
     }
-    
-    public static void main ( String args [ ] ) {
-		PinSetterView pg = new PinSetterView ( 1 );
-    }
+
+	public static void main(String[] args) {
+		PinSetterView pg = new PinSetterView(1);
+	}
     
 }
