@@ -19,7 +19,7 @@
     <node x="1179.0" y="895.0">ControlDesk</node>
     <node x="369.0" y="895.0">ControlDeskObserver</node>
     <node x="1506.0" y="1693.0">LaneServer</node>
-    <node x="990.0416666666667" y="0.0">LaneObserver</node>
+    <node x="990.0416666666666" y="0.0">LaneObserver</node>
     <node x="1172.0" y="1693.0">PrintableText</node>
     <node x="1535.0" y="895.0">Pinsetter</node>
     <node x="369.0" y="999.0">ControlDeskView</node>
@@ -38,7 +38,7 @@
     <edge source="LaneStatusView" target="LaneObserver">
       <point x="87.5" y="-211.5" />
       <point x="1002.5" y="79.0" />
-      <point x="1063.5416666666667" y="79.0" />
+      <point x="1063.5416666666665" y="79.0" />
       <point x="-73.5" y="27.0" />
     </edge>
     <edge source="LaneStatusView" target="PinsetterObserver">
@@ -50,7 +50,7 @@
     <edge source="LaneView" target="LaneObserver">
       <point x="0.0" y="-246.0" />
       <point x="1257.0" y="79.0" />
-      <point x="1210.5416666666667" y="79.0" />
+      <point x="1210.5416666666665" y="79.0" />
       <point x="73.5" y="27.0" />
     </edge>
     <edge source="ControlDeskView" target="ControlDeskObserver">
@@ -68,14 +68,12 @@
       <point x="0.0" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.014734774066797641" x="1008.0000000000001" y="969.5" />
-  <SelectedNodes>
-    <node>LaneView</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.1147347740667976" x="63648.93333333332" y="11658.499999999998" />
+  <SelectedNodes />
   <Categories>
-    <Category>Fields</Category>
-    <Category>Methods</Category>
     <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
