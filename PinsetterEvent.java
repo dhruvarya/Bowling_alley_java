@@ -85,5 +85,5 @@ public class PinsetterEvent {
 	public int getThrowNumber() {
 		return throwNumber;
 	}
-};
+}
 

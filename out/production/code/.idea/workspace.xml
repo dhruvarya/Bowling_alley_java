@@ -1,11 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.9883721" />
   </component>
-  <component name="ProjectId" id="1ZXauDHfeSB6i1H9uwnQ5Tz7ked" />
+  <component name="ChangeListManager">
+    <list default="true" id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="initial working code">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeStyleCheckTool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddPartyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/AddPartyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOWLERS.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/BOWLERS.DAT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BowlerFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/BowlerFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControlDesk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlDeskEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControlDeskEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlDeskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControlDeskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndGamePrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/EndGamePrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndGameReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/EndGameReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaneEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaneEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaneObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaneObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaneServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaneServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaneStatusView.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaneStatusView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaneView.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaneView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewPatronView.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewPatronView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinSetterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinSetterView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pinsetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pinsetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintableText.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrintableText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCOREHISTORY.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/SCOREHISTORY.DAT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreHistoryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreHistoryFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/Drive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drive.uml" beforeDir="false" afterPath="$PROJECT_DIR$/drive.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/AddPartyView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/AddPartyView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/BOWLERS.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/BOWLERS.DAT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/ControlDesk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/ControlDesk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/ControlDeskEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/ControlDeskEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/EndGameReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/EndGameReport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/Lane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/Lane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/LaneStatusView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/LaneStatusView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/Party.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/Queue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/SCOREHISTORY.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/SCOREHISTORY.DAT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/ScoreReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/ScoreReport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/drive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/drive.uml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/drive.uml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DsmViewSettings">
+    <option name="groupCycles" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="sumanth balaji" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+        </Entry>
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZUaMZaFRs5FQ3M1MK7SxKFIfUK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_libraries/smtp-1.4.4.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Bowling_alley_driver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Drive" />
+      <module name="code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="" />
+      <created>1584896078349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584896078349</updated>
+      <workItem from="1584896079606" duration="70000" />
+      <workItem from="1584896406977" duration="1348000" />
+      <workItem from="1584948242834" duration="641000" />
+      <workItem from="1585027415762" duration="13250000" />
+      <workItem from="1585050438722" duration="6186000" />
+      <workItem from="1585056695777" duration="3499000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial working code" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial working code" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="215" width="800" height="677" key="#Inspections" timestamp="1585058884526">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="555" y="215" width="800" height="677" key="#Inspections/0.28.1920.1052@0.28.1920.1052" timestamp="1585058884526" />
+    <state x="75" y="215" width="800" height="677" key="#Plugins" timestamp="1585056632048">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="75" y="215" width="800" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1585056632048" />
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585054453970">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585054453969" />
+    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584896105370">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1584896105370" />
+    <state x="123" y="201" width="703" height="706" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1585029568153">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="123" y="201" width="703" height="706" key="#com.intellij.unscramble.UnscrambleDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585029568153" />
+    <state x="707" y="473" width="640" height="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585059530869">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="707" y="473" width="640" height="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.28.1920.1052@0.28.1920.1052" timestamp="1585059530869" />
+    <state x="921" y="136" width="894" height="820" key="CommitChangelistDialog2" timestamp="1584896951069">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="921" y="136" width="894" height="820" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1584896951069" />
+    <state x="100" y="128" width="1720" height="852" key="DiffContextDialog" timestamp="1585038780627">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="100" y="128" width="1720" height="852" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585038780627" />
+    <state x="739" y="283" width="757" height="542" key="FileChooserDialogImpl" timestamp="1585045275567">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="739" y="283" width="757" height="542" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1585045275567" />
+    <state width="1876" height="527" key="GridCell.Tab.0.bottom" timestamp="1585056635013">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="527" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1585056635013" />
+    <state width="1876" height="527" key="GridCell.Tab.0.center" timestamp="1585056635013">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="527" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1585056635013" />
+    <state width="1876" height="527" key="GridCell.Tab.0.left" timestamp="1585056635012">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="527" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1585056635012" />
+    <state width="1876" height="527" key="GridCell.Tab.0.right" timestamp="1585056635013">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="527" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1585056635013" />
+    <state width="916" height="235" key="GridCell.Tab.1.bottom" timestamp="1585043406158">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="916" height="235" key="GridCell.Tab.1.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1585043406158" />
+    <state width="916" height="235" key="GridCell.Tab.1.center" timestamp="1585043406157">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="916" height="235" key="GridCell.Tab.1.center/0.28.1920.1052@0.28.1920.1052" timestamp="1585043406157" />
+    <state width="916" height="235" key="GridCell.Tab.1.left" timestamp="1585043406157">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="916" height="235" key="GridCell.Tab.1.left/0.28.1920.1052@0.28.1920.1052" timestamp="1585043406157" />
+    <state width="916" height="235" key="GridCell.Tab.1.right" timestamp="1585043406158">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="916" height="235" key="GridCell.Tab.1.right/0.28.1920.1052@0.28.1920.1052" timestamp="1585043406158" />
+    <state x="0" y="131" width="1024" height="845" key="SettingsEditor" timestamp="1585057576563">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="0" y="131" width="1024" height="845" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1585057576563" />
+    <state x="147" y="450" width="655" height="207" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585029039075">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="147" y="450" width="655" height="207" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.28.1920.1052@0.28.1920.1052" timestamp="1585029039075" />
+    <state x="674" y="547" width="600" height="472" key="extract.method.dialog" timestamp="1585056496638">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="674" y="547" width="600" height="472" key="extract.method.dialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585056496638" />
+    <state x="705" y="175" width="500" height="758" key="refactoring.ChangeSignatureDialog" timestamp="1585028823578">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="705" y="175" width="500" height="758" key="refactoring.ChangeSignatureDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585028823578" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1585057363269">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1585057363269" />
+    <state x="143" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1585056618435">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="143" y="260" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1585056618435" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ScoreReport.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

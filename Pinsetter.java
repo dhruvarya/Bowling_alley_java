@@ -71,12 +71,11 @@
  */
 
 import java.util.*;
-import java.lang.Boolean;
 
 public class Pinsetter {
 
 	private Random rnd;
-	private Vector subscribers;
+	private Vector<PinsetterObserver> subscribers;
 
 	private boolean[] pins; 
 			/* 0-9 of state of pine, true for standing, 
@@ -99,9 +98,9 @@ public class Pinsetter {
 	 * @post all subscribers have recieved pinsetter event with updated state
 	 * */
 	private void sendEvent(int jdpins) {	// send events when our state is changd
-		for (int i=0; i < subscribers.size(); i++) {
-			((PinsetterObserver)subscribers.get(i)).receivePinsetterEvent(
-				new PinsetterEvent(pins, foul, throwNumber, jdpins));
+		for (PinsetterObserver subscriber : subscribers) {
+			subscriber.receivePinsetterEvent(
+					new PinsetterEvent(pins, foul, throwNumber, jdpins));
 		}
 	}
 
@@ -116,7 +115,7 @@ public class Pinsetter {
 	public Pinsetter() {
 		pins = new boolean[10];
 		rnd = new Random();
-		subscribers = new Vector();
+		subscribers = new Vector<>();
 		foul = false;
 		reset();
 	}
@@ -149,7 +148,7 @@ public class Pinsetter {
 
 		try {
 			Thread.sleep(500);				// pinsetter is where delay will be in a real game
-		} catch (Exception e) {}
+		} catch (Exception ignored) {}
 
 		sendEvent(count);
 
@@ -170,7 +169,7 @@ public class Pinsetter {
 		
 		try {
 			Thread.sleep(1000);
-		} catch (Exception e) {}
+		} catch (Exception ignored) {}
 		
 		sendEvent(-1);
 	}
@@ -199,5 +198,5 @@ public class Pinsetter {
 		subscribers.add(subscriber);
 	}
 
-};
+}
 
