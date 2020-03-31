@@ -49,7 +49,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	private Vector<String> party;
 	private Vector<String> bowlerdb;
 	private Integer lock;
-
 	private ControlDeskView controlDesk;
 
 	private String selectedNick, selectedMember;
@@ -107,7 +106,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(4, 1));
 
-		Insets buttonMargin = new Insets(4, 4, 4, 4);
 
 		addPatron = new JButton("Add to Party");
 		JPanel addPatronPanel = new JPanel();
