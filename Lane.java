@@ -225,9 +225,7 @@ public class Lane extends Thread implements PinsetterObserver {
 			resetBowlerIterator();
 
 		} else if (result == 2) {// no, dont want to play another game
-			Vector printVector;
-			EndGameReport egr = new EndGameReport( (party.getMembers().get(0)).getNickName() + "'s Party", party);
-			printVector = egr.getResult();
+			Vector printVector = getPrintVector();
 			partyAssigned = false;
 			Iterator<Bowler> scoreIt = party.getMembers().iterator();
 			party = null;
@@ -249,6 +247,13 @@ public class Lane extends Thread implements PinsetterObserver {
 
 			}
 		}
+	}
+
+	private Vector getPrintVector() {
+		Vector printVector;
+		EndGameReport egr = new EndGameReport( (party.getMembers().get(0)).getNickName() + "'s Party", party);
+		printVector = egr.getResult();
+		return printVector;
 	}
 
 	private void gameOngoing() {
@@ -453,7 +458,6 @@ public class Lane extends Thread implements PinsetterObserver {
 	 */
 	private int getScore( Bowler Cur, int frame) {
 		int[] curScore;
-		int strikeballs = 0;
 		int totalScore = 0;
 		curScore = scores.get(Cur);
 		for (int i = 0; i != 10; i++){
@@ -487,21 +491,23 @@ public class Lane extends Thread implements PinsetterObserver {
 	}
 
 	private boolean firstStrike(int[] curScore, int i) {
+		int strikeballs = getStrikeballs(curScore, i);
+		return doubleStrikeStreak(curScore, i, strikeballs);
+	}
+
+	private int getStrikeballs(int[] curScore, int i) {
 		int strikeballs;
 		strikeballs = 0;
 		//This ball is the first ball, and was a strike.
 		//If we can get 2 balls after it, good add them to cumul.
 		if (curScore[i+2] != -1) {
 			strikeballs = 1;
-			if(curScore[i+3] != -1) {
-				//Still got em.
-				strikeballs = 2;
-			} else if(curScore[i+4] != -1) {
+			if(curScore[i+3] != -1 || curScore[i+4] != -1) {
 				//Ok, got it.
 				strikeballs = 2;
 			}
 		}
-		return doubleStrikeStreak(curScore, i, strikeballs);
+		return strikeballs;
 	}
 
 	private boolean doubleStrikeStreak(int[] curScore, int i, int strikeballs) {
@@ -511,30 +517,29 @@ public class Lane extends Thread implements PinsetterObserver {
 			cumulScores[bowlIndex][i/2] += 10;
 			if(curScore[i+1] != -1) {
 				cumulScores[bowlIndex][i/2] += curScore[i+1] + cumulScores[bowlIndex][(i/2)-1];
-				if (curScore[i+2] != -1){
-					if( curScore[i+2] != -2){
+				if (curScore[i+2] != -1 && curScore[i+2] != -2){
 						cumulScores[bowlIndex][(i/2)] += curScore[i+2];
-					}
-				} else {
-					if( curScore[i+3] != -2){
-						cumulScores[bowlIndex][(i/2)] += curScore[i+3];
-					}
 				}
-			} else {
+				else if( curScore[i+3] != -2){
+						cumulScores[bowlIndex][(i/2)] += curScore[i+3];
+				}
+			}
+			else {
 				if ( i/2 > 0 ){
 					cumulScores[bowlIndex][i/2] += curScore[i+2] + cumulScores[bowlIndex][(i/2)-1];
-				} else {
+				}
+				else {
 					cumulScores[bowlIndex][i/2] += curScore[i+2];
 				}
-				if (curScore[i+3] != -1){
-					if( curScore[i+3] != -2){
+				if (curScore[i+3] != -1 && curScore[i+3] != -2){
 						cumulScores[bowlIndex][(i/2)] += curScore[i+3];
-					}
-				} else {
+				}
+				else {
 					cumulScores[bowlIndex][(i/2)] += curScore[i+4];
 				}
 			}
-		} else {
+		}
+		else {
 			return true;
 		}
 		return false;
@@ -543,24 +548,22 @@ public class Lane extends Thread implements PinsetterObserver {
 	private void normalThrow(int[] curScore, int i) {
 		//We're dealing with a normal throw, add it and be on our way.
 		if( i%2 == 0 && i < 18){
-			if ( i/2 == 0 ) {
-				//First frame, first ball.  Set his cumul score to the first ball
-				if(curScore[i] != -2){
+			if ( i/2 == 0 && curScore[i] != -2){
 					cumulScores[bowlIndex][i/2] += curScore[i];
-				}
-			} else {
+			}
+			else {
 				//add his last frame's cumul to this ball, make it this frame's cumul.
 				if(curScore[i] != -2){
 					cumulScores[bowlIndex][i/2] += cumulScores[bowlIndex][i/2 - 1] + curScore[i];
-				} else {
+				}
+				else {
 					cumulScores[bowlIndex][i/2] += cumulScores[bowlIndex][i/2 - 1];
 				}
 			}
-		} else if (i < 18){
-			if(curScore[i] != -1 && i > 2){
-				if(curScore[i] != -2){
+		}
+		else if (i < 18){
+			if(curScore[i] != -1 && i > 2 && curScore[i] != -2){
 					cumulScores[bowlIndex][i/2] += curScore[i];
-				}
 			}
 		}
 		if (i/2 == 9){
@@ -570,10 +573,9 @@ public class Lane extends Thread implements PinsetterObserver {
 			if(curScore[i] != -2){
 				cumulScores[bowlIndex][9] += curScore[i];
 			}
-		} else if (i/2 == 10) {
-			if(curScore[i] != -2){
+		}
+		else if (i/2 == 10 && curScore[i] != -2){
 				cumulScores[bowlIndex][9] += curScore[i];
-			}
 		}
 	}
 

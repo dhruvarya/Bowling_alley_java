@@ -104,8 +104,7 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 	public void actionPerformed( ActionEvent e ) {
 
 		viewPinSet(e);
-		if (e.getSource().equals(viewLane)) {
-			if ( lane.isPartyAssigned() ) { 
+		if (e.getSource().equals(viewLane) && lane.isPartyAssigned() ) {
 				if (!laneShowing) {
 					lv.show();
 					laneShowing=true;
@@ -113,19 +112,15 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 					lv.hide();
 					laneShowing=false;
 				}
-			}
 		}
-		if (e.getSource().equals(maintenance)) {
-			if ( lane.isPartyAssigned() ) {
+		if (e.getSource().equals(maintenance) && lane.isPartyAssigned() ) {
 				lane.unPauseGame();
 				maintenance.setBackground( Color.GREEN );
-			}
 		}
 	}
 
 	private void viewPinSet(ActionEvent e) {
-		if ( lane.isPartyAssigned() ) {
-			if (e.getSource().equals(viewPinSetter)) {
+		if ( lane.isPartyAssigned() && e.getSource().equals(viewPinSetter)) {
 				if (!psShowing) {
 					psv.show();
 					psShowing=true;
@@ -133,7 +128,6 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 					psv.hide();
 					psShowing=false;
 				}
-			}
 		}
 	}
 
@@ -145,7 +139,8 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 		if (!lane.isPartyAssigned()) {
 			viewLane.setEnabled( false );
 			viewPinSetter.setEnabled( false );
-		} else {
+		}
+		else {
 			viewLane.setEnabled( true );
 			viewPinSetter.setEnabled( true );
 		}
