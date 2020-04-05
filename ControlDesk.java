@@ -53,14 +53,13 @@ class ControlDesk extends Thread {
 
 	/** The number of lanes represented */
 	private int numLanes;
-	
-	/** The collection of subscribers */
-	private Vector<ControlDeskObserver> subscribers;
+
+	Subscriber sub;
 
     /**
      * Constructor for the ControlDesk class
      *
-     * @param numlanes	the numbler of lanes to be represented
+     * @param numLanes	the number of lanes to be represented
      *
      */
 
@@ -68,9 +67,7 @@ class ControlDesk extends Thread {
 		this.numLanes = numLanes;
 		lanes = new HashSet<>(numLanes);
 		partyQueue = new Queue();
-
-		subscribers = new Vector<>();
-
+		sub = new Subscriber();
 		for (int i = 0; i < numLanes; i++) {
 			lanes.add(new Lane());
 		}
@@ -188,13 +185,13 @@ class ControlDesk extends Thread {
 
     /**
      * Allows objects to subscribe as observers
-     * 
+     *
      * @param adding	the ControlDeskObserver that will be subscribed
      *
      */
 
 	public void subscribe(ControlDeskObserver adding) {
-		subscribers.add(adding);
+		sub.subscribe(adding);
 	}
 
     /**
@@ -205,11 +202,7 @@ class ControlDesk extends Thread {
      */
 
 	public void publish(ControlDeskEvent event) {
-		for (ControlDeskObserver subscriber : subscribers) {
-			subscriber
-					.receiveControlDeskEvent(
-							event);
-		}
+		sub.publish(event);
 	}
 
     /**
