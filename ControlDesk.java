@@ -53,14 +53,13 @@ class ControlDesk extends Thread {
 
 	/** The number of lanes represented */
 	private int numLanes;
-	
-	/** The collection of subscribers */
-	private Vector<ControlDeskObserver> subscribers;
+
+	Subscriber sub;
 
     /**
      * Constructor for the ControlDesk class
      *
-     * @param numlanes	the numbler of lanes to be represented
+     * @param numLanes	the number of lanes to be represented
      *
      */
 
@@ -68,9 +67,7 @@ class ControlDesk extends Thread {
 		this.numLanes = numLanes;
 		lanes = new HashSet<>(numLanes);
 		partyQueue = new Queue();
-
-		subscribers = new Vector<>();
-
+		sub = new Subscriber();
 		for (int i = 0; i < numLanes; i++) {
 			lanes.add(new Lane());
 		}
@@ -96,30 +93,6 @@ class ControlDesk extends Thread {
 		
 
     /**
-     * Retrieves a matching Bowler from the bowler database.
-     *
-     * @param nickName	The NickName of the Bowler
-     *
-     * @return a Bowler object.
-     *
-     */
-
-	private Bowler registerPatron(String nickName) {
-		Bowler patron = null;
-
-		try {
-			// only one patron / nick.... no dupes, no checks
-
-			patron = BowlerFile.getBowlerInfo(nickName);
-
-		} catch (IOException e) {
-			System.err.println("Error..." + e);
-		}
-
-		return patron;
-	}
-
-    /**
      * Iterate through the available lanes and assign the paties in the wait queue if lanes are available.
      *
      */
@@ -135,7 +108,7 @@ class ControlDesk extends Thread {
 				curLane.assignParty(((Party) partyQueue.next()));
 			}
 		}
-		publish(new ControlDeskEvent(getPartyQueue()));
+		publish(new ControlDeskEvent(partyQueue.getPartyQueue()));
 	}
 
 	/**
@@ -146,33 +119,9 @@ class ControlDesk extends Thread {
      */
 
 	public void addPartyQueue(Vector<String> partyNicks) {
-		Vector<Bowler> partyBowlers = new Vector<>();
-		for (String partyNick : partyNicks) {
-			Bowler newBowler = registerPatron(partyNick);
-			partyBowlers.add(newBowler);
-		}
-		Party newParty = new Party(partyBowlers);
-		partyQueue.add(newParty);
-		publish(new ControlDeskEvent(getPartyQueue()));
-	}
+		partyQueue.addPartyQueue(partyNicks);
+		publish(new ControlDeskEvent(partyQueue.getPartyQueue()));
 
-    /**
-     * Returns a Vector of party names to be displayed in the GUI representation of the wait queue.
-	 *
-     * @return a Vecotr of Strings
-     *
-     */
-
-	public Vector<String> getPartyQueue() {
-		Vector<String> displayPartyQueue = new Vector<>();
-		for (int i = 0; i < (partyQueue.asVector()).size(); i++ ) {
-			String nextParty =
-				((partyQueue.asVector().get( i )).getMembers())
-					.get(0)
-					.getNickName() + "'s Party";
-			displayPartyQueue.addElement(nextParty);
-		}
-		return displayPartyQueue;
 	}
 
     /**
@@ -188,13 +137,13 @@ class ControlDesk extends Thread {
 
     /**
      * Allows objects to subscribe as observers
-     * 
+     *
      * @param adding	the ControlDeskObserver that will be subscribed
      *
      */
 
 	public void subscribe(ControlDeskObserver adding) {
-		subscribers.add(adding);
+		sub.subscribe(adding);
 	}
 
     /**
@@ -205,11 +154,7 @@ class ControlDesk extends Thread {
      */
 
 	public void publish(ControlDeskEvent event) {
-		for (ControlDeskObserver subscriber : subscribers) {
-			subscriber
-					.receiveControlDeskEvent(
-							event);
-		}
+		sub.publish(event);
 	}
 
     /**
