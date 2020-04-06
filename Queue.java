@@ -36,5 +36,42 @@ public class Queue {
 	public Vector<Party> asVector() {
 		return (Vector<Party>) v.clone();
 	}
-	
+
+	/**
+	 * Creates a party from a Vector of nickNAmes and adds them to the wait queue.
+	 *
+	 * @param partyNicks	A Vector of NickNames
+	 *
+	 */
+
+	public void addPartyQueue(Vector<String> partyNicks) {
+		Vector<Bowler> partyBowlers = new Vector<>();
+		for (String partyNick : partyNicks) {
+			Bowler newBowler = BowlerFile.registerPatron(partyNick);
+			partyBowlers.add(newBowler);
+		}
+		Party newParty = new Party(partyBowlers);
+		this.add(newParty);
+	}
+
+	/**
+	 * Returns a Vector of party names to be displayed in the GUI representation of the wait queue.
+	 *
+	 * @return a Vecotr of Strings
+	 *
+	 */
+
+	public Vector<String> getPartyQueue() {
+		Vector<String> displayPartyQueue = new Vector<>();
+		for (int i = 0; i < (this.asVector()).size(); i++ ) {
+			String nextParty =
+					((this.asVector().get( i )).getMembers())
+							.get(0)
+							.getNickName() + "'s Party";
+			displayPartyQueue.addElement(nextParty);
+		}
+		return displayPartyQueue;
+	}
+
+
 }
