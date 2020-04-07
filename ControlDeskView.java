@@ -8,7 +8,7 @@
  * 
  */
 
-/**
+/*
  * Class for representation of the control desk
  *
  */
@@ -25,7 +25,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	private JButton addParty, finished, assign;
 	private JFrame win;
 	private JList<String> partyList;
-	
+
 	/** The maximum  number of members in a party */
 	private int maxMembers;
 	
@@ -37,7 +37,6 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	 */
 
 	public ControlDeskView(ControlDesk controlDesk, int maxMembers) {
-
 		this.controlDesk = controlDesk;
 		this.maxMembers = maxMembers;
 		int numLanes = controlDesk.getNumLanes();
@@ -54,26 +53,13 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		controlsPanel.setLayout(new GridLayout(3, 1));
 		controlsPanel.setBorder(new TitledBorder("Controls"));
 
-		addParty = new JButton("Add Party");
-		JPanel addPartyPanel = new JPanel();
-		addPartyPanel.setLayout(new FlowLayout());
-		addParty.addActionListener(this);
-		addPartyPanel.add(addParty);
-		controlsPanel.add(addPartyPanel);
+		ButtonRoutine routine = new ButtonRoutine(this);
+		addParty= routine.Routine("Add Party",controlsPanel);
 
-		assign = new JButton("Assign Lanes");
-		JPanel assignPanel = new JPanel();
-		assignPanel.setLayout(new FlowLayout());
-		assign.addActionListener(this);
-		assignPanel.add(assign);
-//		controlsPanel.add(assignPanel);
 
-		finished = new JButton("Finished");
-		JPanel finishedPanel = new JPanel();
-		finishedPanel.setLayout(new FlowLayout());
-		finished.addActionListener(this);
-		finishedPanel.add(finished);
-		controlsPanel.add(finishedPanel);
+//		assign = routine.Routine("Assign Lanes",controlsPanel);
+
+		finished = routine.Routine("Finished",controlsPanel);
 
 		// Lane Status Panel
 		JPanel laneStatusPanel = new JPanel();
@@ -101,14 +87,10 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		Vector<String> empty = new Vector<>();
 		empty.add("(Empty)");
 
-		partyList = new JList<>(empty);
-		partyList.setFixedCellWidth(120);
-		partyList.setVisibleRowCount(10);
-		JScrollPane partyPane = new JScrollPane(partyList);
-		partyPane.setVerticalScrollBarPolicy(
-			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		partyPanel.add(partyPane);
-		//		partyPanel.add(partyList);
+		Scrollable scroll= new Scrollable(null);
+
+		partyList=scroll.Scroller(120,10,empty,partyPanel);
+
 
 		// Clean up main panel
 		colPanel.add(controlsPanel, "East");
@@ -129,11 +111,12 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		// Center Window on Screen
 		Dimension screenSize = (Toolkit.getDefaultToolkit()).getScreenSize();
 		win.setLocation(
-			((screenSize.width) / 2) - ((win.getSize().width) / 2),
-			((screenSize.height) / 2) - ((win.getSize().height) / 2));
+				((screenSize.width) / 2) - ((win.getSize().width) / 2),
+				((screenSize.height) / 2) - ((win.getSize().height) / 2));
 		win.show();
 
 	}
+
 
 	/**
 	 * Handler for actionEvents

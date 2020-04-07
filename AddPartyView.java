@@ -48,7 +48,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	private JList<String> allBowlers;
 	private Vector<String> party;
 	private Vector<String> bowlerdb;
-	private Integer lock;
 	private ControlDeskView controlDesk;
 
 	private String selectedNick, selectedMember;
@@ -74,13 +73,9 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 		Vector<String> empty = new Vector<>();
 		empty.add("(Empty)");
 
-		partyList = new JList<>(empty);
-		partyList.setFixedCellWidth(120);
-		partyList.setVisibleRowCount(5);
-		partyList.addListSelectionListener(this);
-		JScrollPane partyPane = new JScrollPane(partyList);
-		//        partyPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		partyPanel.add(partyPane);
+		Scrollable scroll= new Scrollable(this);
+
+		partyList=scroll.Scroller(120,5,empty,partyPanel);
 
 		// Bowler Database
 		JPanel bowlerPanel = new JPanel();
@@ -93,48 +88,21 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 			System.err.println("File Error");
 			bowlerdb = new Vector<>();
 		}
-		allBowlers = new JList<>(bowlerdb);
-		allBowlers.setVisibleRowCount(8);
-		allBowlers.setFixedCellWidth(120);
-		JScrollPane bowlerPane = new JScrollPane(allBowlers);
-		bowlerPane.setVerticalScrollBarPolicy(
-			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		allBowlers.addListSelectionListener(this);
-		bowlerPanel.add(bowlerPane);
+
+		allBowlers=scroll.Scroller(120,8,bowlerdb,bowlerPanel);
 
 		// Button Panel
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(4, 1));
 
+		ButtonRoutine routine = new ButtonRoutine(this);
+		addPatron=routine.Routine("Add to Party",buttonPanel);
 
-		addPatron = new JButton("Add to Party");
-		JPanel addPatronPanel = new JPanel();
-		addPatronPanel.setLayout(new FlowLayout());
-		addPatron.addActionListener(this);
-		addPatronPanel.add(addPatron);
+		remPatron = routine.Routine("Remove Member",buttonPanel);
 
-		remPatron = new JButton("Remove Member");
-		JPanel remPatronPanel = new JPanel();
-		remPatronPanel.setLayout(new FlowLayout());
-		remPatron.addActionListener(this);
-		remPatronPanel.add(remPatron);
+		newPatron = routine.Routine("New Patron",buttonPanel);
 
-		newPatron = new JButton("New Patron");
-		JPanel newPatronPanel = new JPanel();
-		newPatronPanel.setLayout(new FlowLayout());
-		newPatron.addActionListener(this);
-		newPatronPanel.add(newPatron);
-
-		finished = new JButton("Finished");
-		JPanel finishedPanel = new JPanel();
-		finishedPanel.setLayout(new FlowLayout());
-		finished.addActionListener(this);
-		finishedPanel.add(finished);
-
-		buttonPanel.add(addPatronPanel);
-		buttonPanel.add(remPatronPanel);
-		buttonPanel.add(newPatronPanel);
-		buttonPanel.add(finishedPanel);
+		finished = routine.Routine("Finished",buttonPanel);
 
 		// Clean up main panel
 		colPanel.add(partyPanel);
@@ -153,6 +121,8 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 		win.show();
 
 	}
+
+
 
 	public void actionPerformed(ActionEvent e) {
 		addPatron(e);
