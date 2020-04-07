@@ -76,7 +76,8 @@ public class Pinsetter {
 
 	private Random rnd;
 	private Vector<PinsetterObserver> subscribers;
-
+	private boolean tenthFrameStrike;
+	private boolean canThrowAgain;
 	private boolean[] pins; 
 			/* 0-9 of state of pine, true for standing, 
 			false for knocked down
@@ -89,6 +90,23 @@ public class Pinsetter {
 			*/
 	private boolean foul;
 	private int throwNumber;
+
+
+	public boolean isTenthFrameStrike() {
+		return tenthFrameStrike;
+	}
+
+	public void setTenthFrameStrike(boolean tenthFrameStrike) {
+		this.tenthFrameStrike = tenthFrameStrike;
+	}
+
+	public boolean isCanThrowAgain() {
+		return canThrowAgain;
+	}
+
+	public void setCanThrowAgain(boolean canThrowAgain) {
+		this.canThrowAgain = canThrowAgain;
+	}
 
 	/** sendEvent()
 	 * 
@@ -197,6 +215,46 @@ public class Pinsetter {
 	public void subscribe(PinsetterObserver subscriber) {
 		subscribers.add(subscriber);
 	}
+
+
+	public void ThisIsARealThrow(PinsetterEvent pe, int frameNumber) {
+		if (frameNumber == 9) {
+			onLastFrame(pe);
+		} else { // its not the 10th frame
+
+			if (pe.pinsDownOnThisThrow() == 10) {		// threw a strike
+				canThrowAgain = false;
+				//publish( lanePublish() );
+			} else if (pe.getThrowNumber() == 2) {
+				canThrowAgain = false;
+				//publish( lanePublish() );
+			} else if (pe.getThrowNumber() == 3)
+				System.out.println("I'm here...");
+		}
+	}
+
+	private void onLastFrame(PinsetterEvent pe) {
+		if (pe.totalPinsDown() == 10) {
+			this.resetPins();
+			if(pe.getThrowNumber() == 1) {
+				tenthFrameStrike = true;
+			}
+		}
+
+		if ((pe.totalPinsDown() != 10) && (pe.getThrowNumber() == 2 && !tenthFrameStrike)) {
+			canThrowAgain = false;
+			//publish( lanePublish() );
+		}
+
+		if (pe.getThrowNumber() == 3) {
+			canThrowAgain = false;
+			//publish( lanePublish() );
+		}
+	}
+
+
+
+
 
 }
 
