@@ -11,6 +11,8 @@ public class ControlsPanelRoutine {
 
         ButtonRoutine routine = new ButtonRoutine(controlDeskView);
         routine.Routine("Add Party",this.controlsPanel);
+        routine.Routine("Player Records", this.controlsPanel);
+        routine.Routine("Search Player Record", this.controlsPanel);
 //		routine.Routine("Assign Lanes",this.controlsPanel);
         routine.Routine("Finished",this.controlsPanel);
 

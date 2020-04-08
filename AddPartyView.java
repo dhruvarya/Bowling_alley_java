@@ -40,7 +40,6 @@ import java.util.*;
 
 public class AddPartyView implements ActionListener, ListSelectionListener {
 
-	private int maxSize;
 
 	private JFrame win;
 	private JButton addPatron, newPatron, remPatron, finished;
@@ -52,10 +51,9 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 
 	private String selectedNick, selectedMember;
 
-	public AddPartyView(ControlDeskView controlDesk, int max) {
+	public AddPartyView(ControlDeskView controlDesk) {
 
 		this.controlDesk = controlDesk;
-		maxSize = max;
 
 		win = new JFrame("Add Party");
 		win.getContentPane().setLayout(new BorderLayout());
@@ -146,7 +144,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 
 	private void addPatron(ActionEvent e) {
 		if (e.getSource().equals(addPatron)) {
-			if (selectedNick != null && party.size() < maxSize) {
+			if (selectedNick != null) {
 				if (party.contains(selectedNick)) {
 					System.err.println("Member already in Party");
 				} else {

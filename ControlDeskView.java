@@ -26,7 +26,6 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	private JList<String> partyList;
 
 	/** The maximum  number of members in a party */
-	private int maxMembers;
 	
 	private ControlDesk controlDesk;
 
@@ -35,9 +34,8 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	 *
 	 */
 
-	public ControlDeskView(ControlDesk controlDesk, int maxMembers) {
+	public ControlDeskView(ControlDesk controlDesk) {
 		this.controlDesk = controlDesk;
-		this.maxMembers = maxMembers;
 
 		win = new JFrame("Control Desk");
 		win.getContentPane().setLayout(new BorderLayout());
@@ -99,7 +97,21 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Add Party")) {
-			AddPartyView addPartyWin = new AddPartyView(this, maxMembers);
+			AddPartyView addPartyWin = new AddPartyView(this);
+		}
+		if(e.getActionCommand().equals("Player Records")) {
+			try {
+				ScoreView scoreViewWin = new ScoreView();
+			} catch(Exception er) {
+				System.out.println(e);
+			}
+		}
+		if(e.getActionCommand().equals("Search Player Record")) {
+			try {
+				SearchPlayerView searchPlayerViewWin = new SearchPlayerView();
+			} catch(Exception et) {
+				System.out.println(e);
+			}
 		}
 		if (e.getActionCommand().equals("Assign Lanes")) {
 			controlDesk.assignLane();
