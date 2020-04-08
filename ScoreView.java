@@ -7,24 +7,15 @@ import javax.swing.*;
 import javax.swing.border.*;
 import javax.swing.event.*;
 
-public class ScoreView {
+public class ScoreView implements Serializable{
 
-    private int maxSize;
 
     private JFrame win;
-    private JButton addPatron, newPatron, remPatron, finished;
     private JList<String> partyList;
-    private JList<String> allBowlers;
     private Vector<String> party;
-    private Vector<String> bowlerdb;
-    private Integer lock;
-    private ControlDeskView controlDesk;
     private HashMap<String, Integer> map;
     private String HighestScore;
     private String LowestScore;
-
-
-    private String selectedNick, selectedMember;
 
     public ScoreView() throws IOException{
         BufferedReader in =
