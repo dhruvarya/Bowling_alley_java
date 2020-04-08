@@ -4,10 +4,17 @@
     <option name="SPLITTER_PROPORTION" value="0.9883721" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="Made ALOT of changes lol">
       <change afterPath="$PROJECT_DIR$/ControlsPanelRoutine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlDeskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControlDeskView.java" afterDir="false" />
+=======
+    <list default="true" id="ff350e5b-1fd2-45a8-ab0b-89779f28c716" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Gamestate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lane.java" afterDir="false" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Sumanth Balaji &lt;sumanth.goku@gmail.com&gt;" />
@@ -36,6 +44,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
+=======
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
   <component name="GroovyConsoleState">
     <option name="list">
@@ -57,6 +68,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="ProjectId" id="1aE7MCyrGQ37uuqtEvA35tghnBO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -71,6 +87,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -88,6 +105,11 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+=======
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
   <component name="RunManager">
     <configuration name="Bowling_alley_driver" type="Application" factoryName="Application">
@@ -106,6 +128,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="" />
       <created>1584896078349</created>
       <option name="number" value="Default" />
@@ -129,6 +152,13 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1585061567016</updated>
+=======
+      <changelist id="ff350e5b-1fd2-45a8-ab0b-89779f28c716" name="Default Changelist" comment="" />
+      <created>1586288852640</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586288852640</updated>
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -164,6 +194,7 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="555" y="215" width="800" height="677" key="#Inspections" timestamp="1585058884526">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -283,5 +314,113 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+    <state x="555" y="214" width="800" height="677" key="#Plugins" timestamp="1586291585639">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="214" width="800" height="677" key="#Plugins/0.27.1920.1053@0.27.1920.1053" timestamp="1586291585639" />
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586295667166">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1586295667166" />
+    <state x="693" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586290545432">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1586290545432" />
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1586297899653">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586297899653" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1586297899651">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586297899651" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1586297899650">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586297899650" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1586297899652">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586297899652" />
+    <state x="662" y="254" width="575" height="556" key="RefactorJ.ExtractClass" timestamp="1586295252309">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="662" y="254" width="575" height="556" key="RefactorJ.ExtractClass/0.27.1920.1053@0.27.1920.1053" timestamp="1586295252309" />
+    <state x="443" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1586289116149">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="443" y="130" width="1024" height="845" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1586289116149" />
+    <state x="740" y="421" width="430" height="262" key="com.codemr.intellij.extractors.ExtractModelDialog" timestamp="1586324935915">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="740" y="421" width="430" height="262" key="com.codemr.intellij.extractors.ExtractModelDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1586324935915" />
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1586324920343">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1586324920343" />
+    <state x="0" y="27" width="100" height="100" key="net.trustx.simpleuml.components.BirdViewFrame" timestamp="1586291820143">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="0" y="27" width="100" height="100" key="net.trustx.simpleuml.components.BirdViewFrame/0.27.1920.1053@0.27.1920.1053" timestamp="1586291820143" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1586296270929">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1586296270929" />
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="knownFile1" value="file://$PROJECT_DIR$/../UML.suml" />
+      <option name="knownFile2" value="file://$PROJECT_DIR$/../../Lane.suml" />
+      <option name="knownFile0" value="file://$PROJECT_DIR$/../Lane.suml" />
+      <option name="knownFile3" value="file://$PROJECT_DIR$/../../UML.suml" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/../.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
 </project>
