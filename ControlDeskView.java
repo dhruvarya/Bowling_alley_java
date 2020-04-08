@@ -22,7 +22,6 @@ import java.util.*;
 
 public class ControlDeskView implements ActionListener, ControlDeskObserver {
 
-	private JButton addParty, finished, assign;
 	private JFrame win;
 	private JList<String> partyList;
 
@@ -39,7 +38,6 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	public ControlDeskView(ControlDesk controlDesk, int maxMembers) {
 		this.controlDesk = controlDesk;
 		this.maxMembers = maxMembers;
-		int numLanes = controlDesk.getNumLanes();
 
 		win = new JFrame("Control Desk");
 		win.getContentPane().setLayout(new BorderLayout());
@@ -48,37 +46,12 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		JPanel colPanel = new JPanel();
 		colPanel.setLayout(new BorderLayout());
 
+
+
 		// Controls Panel
-		JPanel controlsPanel = new JPanel();
-		controlsPanel.setLayout(new GridLayout(3, 1));
-		controlsPanel.setBorder(new TitledBorder("Controls"));
-
-		ButtonRoutine routine = new ButtonRoutine(this);
-		addParty= routine.Routine("Add Party",controlsPanel);
-
-
-//		assign = routine.Routine("Assign Lanes",controlsPanel);
-
-		finished = routine.Routine("Finished",controlsPanel);
-
+		JPanel controlsPanel = new ControlsPanelRoutine(this).getPanel();
 		// Lane Status Panel
-		JPanel laneStatusPanel = new JPanel();
-		laneStatusPanel.setLayout(new GridLayout(numLanes, 1));
-		laneStatusPanel.setBorder(new TitledBorder("Lane Status"));
-
-		HashSet<Lane> lanes=controlDesk.getLanes();
-		Iterator<Lane> it = lanes.iterator();
-		int laneCount=0;
-		while (it.hasNext()) {
-			Lane curLane = it.next();
-			LaneStatusView laneStat = new LaneStatusView(curLane,(laneCount+1));
-			curLane.subscribe(laneStat);
-			curLane.getPinsetter().subscribe(laneStat);
-			JPanel lanePanel = laneStat.showLane();
-			lanePanel.setBorder(new TitledBorder("Lane" + ++laneCount ));
-			laneStatusPanel.add(lanePanel);
-		}
-
+		JPanel laneStatusPanel = new LaneStatusRoutine(controlDesk).getPanel();
 		// Party Queue Panel
 		JPanel partyPanel = new JPanel();
 		partyPanel.setLayout(new FlowLayout());
@@ -86,7 +59,6 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 
 		Vector<String> empty = new Vector<>();
 		empty.add("(Empty)");
-
 		Scrollable scroll= new Scrollable(null);
 
 		partyList=scroll.Scroller(120,10,empty,partyPanel);
@@ -126,14 +98,14 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	 */
 
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(addParty)) {
+		if (e.getActionCommand().equals("Add Party")) {
 			AddPartyView addPartyWin = new AddPartyView(this, maxMembers);
 		}
-		if (e.getSource().equals(assign)) {
+		if (e.getActionCommand().equals("Assign Lanes")) {
 			controlDesk.assignLane();
 		}
-		if (e.getSource().equals(finished)) {
-			win.hide();
+		if (e.getActionCommand().equals("Finished")) {
+			win.setVisible(false);
 			System.exit(0);
 		}
 	}
@@ -155,7 +127,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	 * @param ce	the ControlDeskEvent that triggered the handler
 	 *
 	 */
-
+	/// move this one somewhere
 	public void receiveControlDeskEvent(ControlDeskEvent ce) {
 		partyList.setListData((ce.getPartyQueue()));
 	}

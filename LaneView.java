@@ -142,7 +142,7 @@ public class LaneView implements LaneObserver, ActionListener {
 				Insets buttonMargin = new Insets(4, 4, 4, 4);
 
 				ButtonRoutine routine = new ButtonRoutine(this);
-				maintenance= routine.Routine("Add Party",buttonPanel);
+				maintenance= routine.Routine("Maintenance",buttonPanel);
 
 				cpanel.add(buttonPanel, "South");
 
