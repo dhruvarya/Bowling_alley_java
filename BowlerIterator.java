@@ -29,4 +29,31 @@ public class BowlerIterator {
         return printVector;
     }
 
+
+
+    public void bowlermove(Gamestate state, Pinsetter setter, Scorer scorer,Party party){
+        if (getBowlerIterator().hasNext()) {
+            state.setCurrentThrower(getBowlerIterator().next());
+            setter.setCanThrowAgain(true);
+            setter.setTenthFrameStrike(false);
+            state.setBall(0);
+            while (setter.isCanThrowAgain()) {
+                setter.ballThrown();		// simulate the thrower's ball hiting
+                state.setBall(state.getBall()+1);
+            }
+
+            if (state.getFrameNumber() == 9){
+                scorer.Onlastframe(state.getGameNumber(),state.getCurrentThrower());
+            }
+            setter.reset();
+            scorer.bowlIndex++;
+
+        }
+        else {
+
+            resetBowlerIterator(party);
+            scorer.bowlIndex = 0;
+            state.Lastbowler();
+        }
+    }
 }
