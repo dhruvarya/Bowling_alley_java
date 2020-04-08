@@ -96,12 +96,15 @@ public class EndGamePrompt implements ActionListener {
 				System.err.println( "Interrupted" );
 			}
 		}
+		this.distroy();
+
 		return result;	
 	}
 	
 	public void distroy() {
 		win.hide();
 	}
+
 	
 }
 

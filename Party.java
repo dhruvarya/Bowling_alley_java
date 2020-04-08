@@ -49,4 +49,10 @@ public class Party {
 		return (Vector<Bowler>) myBowlers.clone();
     }
 
+	public int getresult()
+	{
+		EndGamePrompt egp = new EndGamePrompt( (getMembers().get(0)).getNickName() + "'s Party" );
+		return egp.getResult();
+	}
+
 }
