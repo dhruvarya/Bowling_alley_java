@@ -106,6 +106,13 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 				System.out.println(e);
 			}
 		}
+		if(e.getActionCommand().equals("Search Player Record")) {
+			try {
+				SearchPlayerView searchPlayerViewWin = new SearchPlayerView();
+			} catch(Exception et) {
+				System.out.println(e);
+			}
+		}
 		if (e.getActionCommand().equals("Assign Lanes")) {
 			controlDesk.assignLane();
 		}
