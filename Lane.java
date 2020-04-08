@@ -164,18 +164,7 @@ public class Lane extends Thread implements PinsetterObserver {
 	public void run() {
 		
 		while (true) {
-
-			if (state.isPartyAssigned())
-			{
-				if(state.isGameFinished())
-				{
-					gameOver();
-				}
-				else
-				{
-					gameOngoing();
-				}
-			}
+			game();
 			try {
 				sleep(10);
 			} catch (Exception ignored) {}
@@ -183,26 +172,62 @@ public class Lane extends Thread implements PinsetterObserver {
 		}
 	}
 
+	public void game(){
+		if (state.isPartyAssigned())
+		{
+			if(state.isGameFinished())
+			{
+//				gameOver();
+				int result=party.getresult();
+				if (result == 1) {
+//					PlayanotherGame();// yes, want to play
+					scorer.resetScore(party);
+					state.setGameFinished(false);
+					state.setFrameNumber(0);
+					bowlerIter.resetBowlerIterator(party);
 
-	private void gameOver() {
+				}
+				else {
+					// no, dont want to play another game
+					NotPlayingAgain();
+				}
 
-		int result=party.getresult();
-		if (result == 1) {
-			PlayanotherGame();// yes, want to play again
+			}
+			else
+			{
+//				gameOngoing();
+				while (state.isGameIsHalted()) {
+					try {
+						sleep(10);
+					} catch (Exception ignored) {}
+				}
+
+				bowlerIter.bowlermove(state,setter,scorer,party);
+
+			}
 		}
-		else {
-			// no, dont want to play another game
-			NotPlayingAgain();
-		}
+
 	}
 
-	private void PlayanotherGame()
-	{
-		scorer.resetScore(party);
-		state.setGameFinished(false);
-		state.setFrameNumber(0);
-		bowlerIter.resetBowlerIterator(party);
-	}
+//	private void gameOver() {
+//
+//		int result=party.getresult();
+//		if (result == 1) {
+//			PlayanotherGame();// yes, want to play again
+//		}
+//		else {
+//			// no, dont want to play another game
+//			NotPlayingAgain();
+//		}
+//	}
+
+//	private void PlayanotherGame()
+//	{
+//		scorer.resetScore(party);
+//		state.setGameFinished(false);
+//		state.setFrameNumber(0);
+//		bowlerIter.resetBowlerIterator(party);
+//	}
 
 	private void NotPlayingAgain()
 	{
@@ -228,15 +253,15 @@ public class Lane extends Thread implements PinsetterObserver {
 		}
 	}
 
-	private void gameOngoing() {
-		while (state.isGameIsHalted()) {
-			try {
-				sleep(10);
-			} catch (Exception ignored) {}
-		}
-
-		bowlerIter.bowlermove(state,setter,scorer,party);
-	}
+//	private void gameOngoing() {
+//		while (state.isGameIsHalted()) {
+//			try {
+//				sleep(10);
+//			} catch (Exception ignored) {}
+//		}
+//
+//		bowlerIter.bowlermove(state,setter,scorer,party);
+//	}
 
 
 	/** recievePinsetterEvent()
@@ -323,12 +348,15 @@ public class Lane extends Thread implements PinsetterObserver {
 	}
 
 	/**
-	 *  Used to pause/resume the game
-	 *  status = true means game would be halted
-	 *  else it will be resumed
+	 *  Used to pause/rresume
 	 */
-	public void Haltgame(boolean status){
-		state.setGameIsHalted(status);
+	public void pauseGame(){
+		state.setGameIsHalted(true);
+		laneSubscriber.publish(lanePublish());
+	}
+
+	public void unpauseGame(){
+		state.setGameIsHalted(false);
 		laneSubscriber.publish(lanePublish());
 	}
 }

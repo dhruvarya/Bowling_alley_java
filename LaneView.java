@@ -192,7 +192,7 @@ public class LaneView implements LaneObserver, ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(maintenance)) {
-			lane.Haltgame(true);
+			lane.pauseGame();
 		}
 	}
 

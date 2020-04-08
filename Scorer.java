@@ -42,8 +42,7 @@ public class Scorer {
     }
 
     int getStrikeballs(int[] curScore, int i) {
-        int strikeballs;
-        strikeballs = 0;
+        int strikeballs= 0;
         //This ball is the first ball, and was a strike.
         //If we can get 2 balls after it, good add them to cumul.
         if (curScore[i + 2] != -1) {
