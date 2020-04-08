@@ -24,23 +24,20 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class SearchPlayerView implements ActionListener {
+public class SearchPlayerView implements ActionListener, Serializable {
 
     private JFrame win;
     private JButton search;
     private JTextField nickField;
-    private String nick, full, email;
     private JList<String> partyList;
     private Vector<String> party;
-    private Vector<String> empty;
-    private boolean done;
 
     public SearchPlayerView() {
 
-        done = false;
 
         win = new JFrame("Search Player");
         win.getContentPane().setLayout(new BorderLayout());
@@ -74,7 +71,7 @@ public class SearchPlayerView implements ActionListener {
         partyPanel.setBorder(new TitledBorder("Scores"));
 
         party = new Vector<>();
-        empty = new Vector<>();
+        Vector<String> empty = new Vector<>();
         empty.add("(Empty)");
 
         partyList = new JList<>(empty);
@@ -139,22 +136,6 @@ public class SearchPlayerView implements ActionListener {
                 partyList.setListData(party);
             }
         }
-    }
-
-    public boolean done() {
-        return done;
-    }
-
-    public String getNick() {
-        return nick;
-    }
-
-    public String getFull() {
-        return full;
-    }
-
-    public String getEmail() {
-        return email;
     }
 }
 
