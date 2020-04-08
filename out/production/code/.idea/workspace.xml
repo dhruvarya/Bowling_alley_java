@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.9883721" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="Made ALOT of changes lol">
+      <change afterPath="$PROJECT_DIR$/ControlsPanelRoutine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlDeskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ControlDeskView.java" afterDir="false" />
+=======
     <list default="true" id="ff350e5b-1fd2-45a8-ab0b-89779f28c716" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Gamestate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lane.java" afterDir="false" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
+  <component name="DsmViewSettings">
+    <option name="groupCycles" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,26 +35,84 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Sumanth Balaji &lt;sumanth.goku@gmail.com&gt;" />
+        <option value="sumanth balaji" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+=======
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+        </Entry>
+      </list>
+    </option>
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZUaMZaFRs5FQ3M1MK7SxKFIfUK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+<<<<<<< HEAD
+=======
   <component name="ProjectId" id="1aE7MCyrGQ37uuqtEvA35tghnBO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_libraries/smtp-1.4.4.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+=======
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Bowling_alley_driver" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Drive" />
       <module name="code" />
       <method v="2">
@@ -49,20 +120,201 @@
       </method>
     </configuration>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="a4d40f78-3fe0-461e-9223-df608030c8b3" name="Default Changelist" comment="" />
+      <created>1584896078349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584896078349</updated>
+      <workItem from="1584896079606" duration="70000" />
+      <workItem from="1584896406977" duration="1348000" />
+      <workItem from="1584948242834" duration="641000" />
+      <workItem from="1585027415762" duration="13250000" />
+      <workItem from="1585050438722" duration="6186000" />
+      <workItem from="1585056695777" duration="4987000" />
+      <workItem from="1585137715895" duration="666000" />
+      <workItem from="1585759858047" duration="682000" />
+      <workItem from="1585761863808" duration="7968000" />
+      <workItem from="1586254484832" duration="20776000" />
+      <workItem from="1586338112997" duration="2029000" />
+    </task>
+    <task id="LOCAL-00001" summary="Made ALOT of changes lol">
+      <created>1585061567016</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585061567016</updated>
+=======
       <changelist id="ff350e5b-1fd2-45a8-ab0b-89779f28c716" name="Default Changelist" comment="" />
       <created>1586288852640</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586288852640</updated>
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial working code" />
+    <MESSAGE value="Made ALOT of changes lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made ALOT of changes lol" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
+    <state x="555" y="215" width="800" height="677" key="#Inspections" timestamp="1585058884526">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="555" y="215" width="800" height="677" key="#Inspections/0.28.1920.1052@0.28.1920.1052" timestamp="1585058884526" />
+    <state x="75" y="215" width="800" height="677" key="#Plugins" timestamp="1585141999189">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="75" y="215" width="800" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1585141999189" />
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585054453970">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585054453969" />
+    <state x="768" y="258" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1586279205620">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="768" y="258" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.28.1920.1052@0.28.1920.1052" timestamp="1586279205620" />
+    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584896105370">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="692" y="340" width="525" height="427" key="#com.intellij.ide.util.TreeClassChooserDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1584896105370" />
+    <state x="153" y="282" width="624" height="543" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585761743998">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="153" y="282" width="624" height="543" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585761743998" />
+    <state x="123" y="201" width="703" height="706" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1585029568153">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="123" y="201" width="703" height="706" key="#com.intellij.unscramble.UnscrambleDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585029568153" />
+    <state x="707" y="473" width="640" height="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585060448575">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="707" y="473" width="640" height="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.28.1920.1052@0.28.1920.1052" timestamp="1585060448575" />
+    <state x="921" y="136" width="894" height="820" key="CommitChangelistDialog2" timestamp="1585061566269">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="921" y="136" width="894" height="820" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1585061566269" />
+    <state x="100" y="128" width="1720" height="852" key="DiffContextDialog" timestamp="1585061628371">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="100" y="128" width="1720" height="852" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585061628371" />
+    <state x="739" y="283" width="757" height="542" key="FileChooserDialogImpl" timestamp="1585045275567">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="739" y="283" width="757" height="542" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1585045275567" />
+    <state width="1876" height="347" key="GridCell.Tab.0.bottom" timestamp="1586287172840">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172840" />
+    <state width="1876" height="347" key="GridCell.Tab.0.center" timestamp="1586287172838">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172838" />
+    <state width="1876" height="347" key="GridCell.Tab.0.left" timestamp="1586287172837">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172837" />
+    <state width="1876" height="347" key="GridCell.Tab.0.right" timestamp="1586287172839">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172839" />
+    <state width="1876" height="347" key="GridCell.Tab.1.bottom" timestamp="1586287172845">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.1.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172845" />
+    <state width="1876" height="347" key="GridCell.Tab.1.center" timestamp="1586287172843">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.1.center/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172843" />
+    <state width="1876" height="347" key="GridCell.Tab.1.left" timestamp="1586287172842">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.1.left/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172842" />
+    <state width="1876" height="347" key="GridCell.Tab.1.right" timestamp="1586287172844">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1876" height="347" key="GridCell.Tab.1.right/0.28.1920.1052@0.28.1920.1052" timestamp="1586287172844" />
+    <state x="0" y="131" width="1024" height="845" key="SettingsEditor" timestamp="1585141963718">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="0" y="131" width="1024" height="845" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1585141963718" />
+    <state x="773" y="248" width="364" height="611" key="com.codemr.intellij.editors.WorkingSetEditDialog" timestamp="1585762377326">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="773" y="248" width="364" height="611" key="com.codemr.intellij.editors.WorkingSetEditDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585762377326" />
+    <state x="755" y="423" width="400" height="261" key="com.codemr.intellij.extractors.ExtractModelDialog" timestamp="1586279499860">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="755" y="423" width="400" height="261" key="com.codemr.intellij.extractors.ExtractModelDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1586279499860" />
+    <state x="147" y="450" width="655" height="207" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585029039075">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="147" y="450" width="655" height="207" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.28.1920.1052@0.28.1920.1052" timestamp="1585029039075" />
+    <state x="674" y="547" width="600" height="472" key="extract.method.dialog" timestamp="1585056496638">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="674" y="547" width="600" height="472" key="extract.method.dialog/0.28.1920.1052@0.28.1920.1052" timestamp="1585056496638" />
+    <state x="705" y="175" width="500" height="758" key="refactoring.ChangeSignatureDialog" timestamp="1586276478384">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="705" y="175" width="500" height="758" key="refactoring.ChangeSignatureDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1586276478384" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1586278673848">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1586278673848" />
+    <state x="143" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1585141972157">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="143" y="260" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1585141972157" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ScoreReport.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+=======
     <state x="555" y="214" width="800" height="677" key="#Plugins" timestamp="1586291585639">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -169,5 +421,6 @@
       <option name="useAntialiasedConnectors" value="true" />
       <option name="packageNameCompressionLevel" value="2" />
     </Packagediagram>
+>>>>>>> ddaaf9a787e0f3b7425f4bb10ab2a11c96da6b92
   </component>
 </project>

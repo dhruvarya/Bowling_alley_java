@@ -24,8 +24,6 @@ import java.awt.event.ActionListener;
 
 public class NewPatronView implements ActionListener {
 
-	private int maxSize;
-
 	private JFrame win;
 	private JButton abort, finished;
 	private JTextField nickField, fullField, emailField;
@@ -33,7 +31,6 @@ public class NewPatronView implements ActionListener {
 
 	private boolean done;
 
-	private String selectedNick, selectedMember;
 	private AddPartyView addParty;
 
 	public NewPatronView(AddPartyView v) {
@@ -53,26 +50,9 @@ public class NewPatronView implements ActionListener {
 		patronPanel.setLayout(new GridLayout(3, 1));
 		patronPanel.setBorder(new TitledBorder("Your Info"));
 
-		JPanel nickPanel = new JPanel();
-		nickPanel.setLayout(new FlowLayout());
-		JLabel nickLabel = new JLabel("Nick Name");
-		nickField = new JTextField("", 15);
-		nickPanel.add(nickLabel);
-		nickPanel.add(nickField);
-
-		JPanel fullPanel = new JPanel();
-		fullPanel.setLayout(new FlowLayout());
-		JLabel fullLabel = new JLabel("Full Name");
-		fullField = new JTextField("", 15);
-		fullPanel.add(fullLabel);
-		fullPanel.add(fullField);
-
-		JPanel emailPanel = new JPanel();
-		emailPanel.setLayout(new FlowLayout());
-		JLabel emailLabel = new JLabel("E-Mail");
-		emailField = new JTextField("", 15);
-		emailPanel.add(emailLabel);
-		emailPanel.add(emailField);
+		JPanel nickPanel = SetPanel("Nick Name");
+		JPanel fullPanel = SetPanel("Full Name");
+		JPanel emailPanel = SetPanel("E-Mail");
 
 		patronPanel.add(nickPanel);
 		patronPanel.add(fullPanel);
@@ -84,25 +64,14 @@ public class NewPatronView implements ActionListener {
 
 		Insets buttonMargin = new Insets(4, 4, 4, 4);
 
-		finished = new JButton("Add Patron");
-		JPanel finishedPanel = new JPanel();
-		finishedPanel.setLayout(new FlowLayout());
-		finished.addActionListener(this);
-		finishedPanel.add(finished);
+		ButtonRoutine routine = new ButtonRoutine(this);
 
-		abort = new JButton("Abort");
-		JPanel abortPanel = new JPanel();
-		abortPanel.setLayout(new FlowLayout());
-		abort.addActionListener(this);
-		abortPanel.add(abort);
-
-		buttonPanel.add(abortPanel);
-		buttonPanel.add(finishedPanel);
+		finished= routine.Routine("Add Patron",buttonPanel);
+		abort = routine.Routine("Abort",buttonPanel);
 
 		// Clean up main panel
 		colPanel.add(patronPanel, "Center");
 		colPanel.add(buttonPanel, "East");
-
 		win.getContentPane().add("Center", colPanel);
 
 		win.pack();
@@ -116,6 +85,27 @@ public class NewPatronView implements ActionListener {
 
 	}
 
+	private JPanel SetPanel(String field_name) {
+		JPanel Panel = new JPanel();
+		Panel.setLayout(new FlowLayout());
+		JLabel Label = new JLabel(field_name);
+		Panel.add(Label);
+		switch (field_name) {
+			case "E-Mail":
+				this.emailField = new JTextField("", 15);
+				Panel.add(this.emailField);
+				break;
+			case "Nick Name":
+				this.nickField = new JTextField("", 15);
+				Panel.add(this.nickField);
+				break;
+			case "Full Name":
+				this.fullField = new JTextField("", 15);
+				Panel.add(this.fullField);
+				break;
+		}
+		return Panel;
+	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(abort)) {
 			done = true;
@@ -150,3 +140,4 @@ public class NewPatronView implements ActionListener {
 	}
 
 }
+
