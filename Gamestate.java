@@ -1,3 +1,6 @@
+import java.util.Iterator;
+import java.util.Vector;
+
 public class Gamestate {
     private boolean gameIsHalted;
     private boolean partyAssigned;
@@ -6,13 +9,14 @@ public class Gamestate {
     private int frameNumber;
     private int ball;
     private Bowler currentThrower;			// = the thrower who just took a throw
-
+    public BowlerIterator bowlerIterator;
 
     public Gamestate()
     {
         gameIsHalted = false;
         partyAssigned = false;
         gameNumber = 0;
+        bowlerIterator = new BowlerIterator();
     }
 
     public int getGameNumber() {

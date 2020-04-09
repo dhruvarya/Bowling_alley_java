@@ -139,7 +139,6 @@ public class Lane extends Thread implements PinsetterObserver {
 	private  Scorer scorer = new Scorer();
 	private Party party;
 	private Pinsetter setter;
-	private BowlerIterator bowlerIter = new BowlerIterator();
 	private Gamestate state;
 	private LaneSubscriber laneSubscriber;
 	/** Lane()
@@ -177,14 +176,12 @@ public class Lane extends Thread implements PinsetterObserver {
 		{
 			if(state.isGameFinished())
 			{
-//				gameOver();
 				int result=party.getresult();
 				if (result == 1) {
-//					PlayanotherGame();// yes, want to play
 					scorer.resetScore(party);
 					state.setGameFinished(false);
 					state.setFrameNumber(0);
-					bowlerIter.resetBowlerIterator(party);
+					state.bowlerIterator.resetBowlerIterator(party);
 
 				}
 				else {
@@ -195,39 +192,19 @@ public class Lane extends Thread implements PinsetterObserver {
 			}
 			else
 			{
-//				gameOngoing();
 				while (state.isGameIsHalted()) {
 					try {
 						sleep(10);
 					} catch (Exception ignored) {}
 				}
 
-				bowlerIter.bowlermove(state,setter,scorer,party);
+				state.bowlerIterator.bowlermove(state,setter,scorer,party);
 
 			}
 		}
 
 	}
 
-//	private void gameOver() {
-//
-//		int result=party.getresult();
-//		if (result == 1) {
-//			PlayanotherGame();// yes, want to play again
-//		}
-//		else {
-//			// no, dont want to play another game
-//			NotPlayingAgain();
-//		}
-//	}
-
-//	private void PlayanotherGame()
-//	{
-//		scorer.resetScore(party);
-//		state.setGameFinished(false);
-//		state.setFrameNumber(0);
-//		bowlerIter.resetBowlerIterator(party);
-//	}
 
 	private void NotPlayingAgain()
 	{
@@ -252,16 +229,6 @@ public class Lane extends Thread implements PinsetterObserver {
 
 		}
 	}
-
-//	private void gameOngoing() {
-//		while (state.isGameIsHalted()) {
-//			try {
-//				sleep(10);
-//			} catch (Exception ignored) {}
-//		}
-//
-//		bowlerIter.bowlermove(state,setter,scorer,party);
-//	}
 
 
 	/** recievePinsetterEvent()
@@ -294,7 +261,7 @@ public class Lane extends Thread implements PinsetterObserver {
 	 */
 	public void assignParty( Party theParty ) {
 		party = theParty;
-		bowlerIter.resetBowlerIterator(party);
+		state.bowlerIterator.resetBowlerIterator(party);
 		state.reset();
 		scorer.curScores = new int[party.getMembers().size()];
 		scorer.cumulScores = new int[party.getMembers().size()][10];
