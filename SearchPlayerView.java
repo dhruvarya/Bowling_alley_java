@@ -24,23 +24,20 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class SearchPlayerView implements ActionListener {
+public class SearchPlayerView implements ActionListener, Serializable {
 
     private JFrame win;
     private JButton search;
     private JTextField nickField;
-    private String nick, full, email;
     private JList<String> partyList;
     private Vector<String> party;
-    private Vector<String> empty;
-    private boolean done;
 
     public SearchPlayerView() {
 
-        done = false;
 
         win = new JFrame("Search Player");
         win.getContentPane().setLayout(new BorderLayout());
@@ -74,7 +71,7 @@ public class SearchPlayerView implements ActionListener {
         partyPanel.setBorder(new TitledBorder("Scores"));
 
         party = new Vector<>();
-        empty = new Vector<>();
+        Vector<String> empty = new Vector<>();
         empty.add("(Empty)");
 
         partyList = new JList<>(empty);
@@ -130,31 +127,26 @@ public class SearchPlayerView implements ActionListener {
         BufferedReader in =
                 new BufferedReader(new FileReader("SCOREHISTORY.DAT"));
         String Values;
+        int HighestScore = 0, LowestScore = 300;
         while ((Values = in.readLine()) != null) {
             String[] scoredata = Values.split("\t");
             if (scoredata[0].equals(nickname)) {
+                if(HighestScore < Integer.valueOf(scoredata[2])) {
+                    HighestScore = Integer.valueOf(scoredata[2]);
+                }
+                if(LowestScore > Integer.valueOf(scoredata[2])) {
+                    LowestScore = Integer.valueOf(scoredata[2]);
+                }
                 party.removeElement("(Empty)");
                 partyList.setListData(party);
                 party.add(scoredata[0] + " " + scoredata[1] + " " + scoredata[2]);
                 partyList.setListData(party);
             }
         }
-    }
-
-    public boolean done() {
-        return done;
-    }
-
-    public String getNick() {
-        return nick;
-    }
-
-    public String getFull() {
-        return full;
-    }
-
-    public String getEmail() {
-        return email;
+        party.add(0, "Previous Scores: ");
+        party.add(0, "Lowest Score: " + Integer.toString(LowestScore));
+        party.add(0, "Highest Score: " + Integer.toString(HighestScore));
+        partyList.setListData(party);
     }
 }
 
