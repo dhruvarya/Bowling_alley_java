@@ -140,7 +140,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	 *
 	 */
 	/// move this one somewhere
-	public void receiveControlDeskEvent(ControlDeskEvent ce) {
-		partyList.setListData((ce.getPartyQueue()));
+	public void receiveControlDeskEvent(Vector<String> partyqueue) {
+		partyList.setListData((Vector<String>) partyqueue.clone());
 	}
 }

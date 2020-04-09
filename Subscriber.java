@@ -24,13 +24,13 @@ class Subscriber {
     /**
      * Broadcast an event to subscribing objects.
      *
-     * @param event	the ControlDeskEvent to broadcast
+     * @param partyqueue	the ControlDeskEvent to broadcast
      *
      */
 
-    public void publish(ControlDeskEvent event) {
+    public void publish(Vector<String> partyqueue) {
         for (ControlDeskObserver subscriber : subscribers) {
-            subscriber.receiveControlDeskEvent(event);
+            subscriber.receiveControlDeskEvent(partyqueue);
         }
     }
 

@@ -8,6 +8,8 @@
  * 
  */
 
+import java.util.Vector;
+
 /**
  * Interface for classes that observe control desk events
  *
@@ -15,6 +17,6 @@
 
 public interface ControlDeskObserver {
 
-	void receiveControlDeskEvent(ControlDeskEvent ce);
+	void receiveControlDeskEvent(Vector<String> partyqueue);
 
 }
