@@ -127,15 +127,26 @@ public class SearchPlayerView implements ActionListener, Serializable {
         BufferedReader in =
                 new BufferedReader(new FileReader("SCOREHISTORY.DAT"));
         String Values;
+        int HighestScore = 0, LowestScore = 300;
         while ((Values = in.readLine()) != null) {
             String[] scoredata = Values.split("\t");
             if (scoredata[0].equals(nickname)) {
+                if(HighestScore < Integer.valueOf(scoredata[2])) {
+                    HighestScore = Integer.valueOf(scoredata[2]);
+                }
+                if(LowestScore > Integer.valueOf(scoredata[2])) {
+                    LowestScore = Integer.valueOf(scoredata[2]);
+                }
                 party.removeElement("(Empty)");
                 partyList.setListData(party);
                 party.add(scoredata[0] + " " + scoredata[1] + " " + scoredata[2]);
                 partyList.setListData(party);
             }
         }
+        party.add(0, "Previous Scores: ");
+        party.add(0, "Lowest Score: " + Integer.toString(LowestScore));
+        party.add(0, "Highest Score: " + Integer.toString(HighestScore));
+        partyList.setListData(party);
     }
 }
 
